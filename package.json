@@ -1,0 +1,38 @@
+{
+  "name": "ts-data-filter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+   "prepublishOnly": "npm test && npm run lint",
+   "preversion": "npm run lint",
+   "version": "npm run format && git add -A src",
+   "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aish0507/ts-data-filter.git"
+  },
+  "keywords": ["Array", "Filter"],
+  "author": "Aishvarya Shrivastava",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aish0507/ts-data-filter/issues"
+  },
+  "homepage": "https://github.com/Aish0507/ts-data-filter#readme",
+  "devDependencies": {
+    "prettier": "^2.0.4",
+    "tslint": "^6.1.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.8.3"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}

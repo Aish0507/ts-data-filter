@@ -1,0 +1,10 @@
+export const isPresent = (value: any) => value !== null && value !== undefined;
+export const isBlank = (value: any) => value === null || value === undefined;
+export const isArray = (value: any) => Array.isArray(value);
+export const isFunction = (value: any) => typeof value === 'function';
+export const isString = (value: any) => typeof value === 'string';
+export const isTruthy = (value: any) => !!value;
+export const isNullOrEmptyString = (value: any) => isBlank(value) || value.trim().length === 0;
+export const isNotNullOrEmptyString = (value: any) => !isNullOrEmptyString(value);
+export const isNumeric = (value: any) => !isNaN(value - parseFloat(value));
+export const isDate = (value: any) => value && value.getTime;
